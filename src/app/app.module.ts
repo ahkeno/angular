@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ItemComponent } from './components/item/item.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
+
+// Services
+import {ItemService} from './services/items.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +28,10 @@ import { CheckoutComponent } from './views/checkout/checkout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

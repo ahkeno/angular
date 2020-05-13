@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { Item } from './../../models/item';
 
 @Component({
   selector: 'app-item',
@@ -8,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ItemComponent implements OnInit {
 
   constructor() { }
-
+  @Input() itemData;
   ngOnInit(): void {
   }
 
