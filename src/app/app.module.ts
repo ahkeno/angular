@@ -7,13 +7,19 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 import { HeaderComponent} from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ItemComponent } from './components/item/item.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CheckoutComponent } from './views/checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ItemComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
