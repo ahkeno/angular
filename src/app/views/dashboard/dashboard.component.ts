@@ -12,6 +12,7 @@ import { WrappedCollection } from './../../services/wrapped.collection';
 })
 export class DashboardComponent implements OnInit {
   items: any;
+  loadData : boolean;
   constructor(
     private itemService : ItemService
   ) { 
@@ -19,12 +20,19 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadItem();
+    //this.loadItem();
   }
   loadItem(){
+    let that = this;
     this.itemService.getAllItems().subscribe(dataItem =>{
       this.items = dataItem;
+      if(this.items){
+        that.loadData = true;
+      }else {
+        that.loadData = false;
+      }
     })
+    
   }
 
 }

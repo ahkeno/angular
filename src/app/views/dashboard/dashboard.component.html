@@ -1,2 +1,8 @@
-<!-- <app-item [itemData]="items"></app-item> -->
-<app-item-list [itemlist]="items"></app-item-list>
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template>
+<div *ngIf="items else loading">
+    <app-item-list [itemlist]="items"></app-item-list>
+</div>
+
+<button (click)="loadItem()">{{ loadData == true ? 'Loaded' :  'Load Data'}}</button>

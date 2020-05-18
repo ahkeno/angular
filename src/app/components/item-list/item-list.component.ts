@@ -10,6 +10,8 @@ export class ItemListComponent implements OnInit {
   constructor() { }
   @Input() itemlist;
   ngOnInit(): void {
+    debugger;
+    console.log(this.itemlist);
   }
 
 }
