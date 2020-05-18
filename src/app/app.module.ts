@@ -14,6 +14,7 @@ import { CheckoutComponent } from './views/checkout/checkout.component';
 
 // Services
 import {ItemService} from './services/items.service';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ItemService} from './services/items.service';
     FooterComponent,
     ItemComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
